@@ -1,0 +1,11 @@
+---
+# vars file for dolt
+dolt_platform: '{{ dolt_os }}-{{ dolt_arch }}'
+dolt_name: dolt-{{ dolt_platform }}
+dolt_tgz: '{{ dolt_name }}.tar.gz'
+dolt_ltgz: '{{ dolt_name }}-{{ dolt_ver }}.tar.gz'
+dolt_checksum: '{{ dolt_checksums[dolt_ver][dolt_platform] }}'
+dolt_url: '{{ dolt_mirror }}/{{ dolt_ver }}/{{ dolt_tgz }}'
+
+dolt_install_ver_dir: '{{ dolt_parent_install_dir }}/dolt-{{ dolt_ver }}'
+dolt_bin_dir: '{{ dolt_install_ver_dir }}/{{ dolt_name }}/bin'

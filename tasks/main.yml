@@ -1,0 +1,53 @@
+---
+- name: resolve platform specific vars
+  include_vars: '{{ item }}'
+  with_first_found:
+    - files:
+        - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
+        - '{{ ansible_distribution }}.yml'
+        - '{{ ansible_os_family }}.yml'
+      skip: true
+      paths:
+        - '{{ role_path }}/vars'
+- name: check existing install
+  become: yes
+  stat:
+    path: '{{ dolt_install_ver_dir }}'
+  changed_when: False
+  register: dolt_binary
+- when: not dolt_binary.stat.exists
+  block:
+    - name: download
+      become: yes
+      become_user: root
+      get_url:
+        url: '{{ dolt_url }}'
+        dest: /tmp/{{ dolt_ltgz }}
+        mode: 0644
+        checksum: '{{ dolt_checksum }}'
+    - name: mkdir
+      become: yes
+      become_user: root
+      file:
+        path: '{{ dolt_install_ver_dir }}'
+        state: directory
+        mode: 0755
+    - name: unarchive
+      become: yes
+      become_user: root
+      unarchive:
+        remote_src: yes
+        src: /tmp/{{ dolt_ltgz }}
+        dest: '{{ dolt_install_ver_dir }}'
+        creates: '{{ dolt_bin_dir }}'
+- name: link
+  become: yes
+  become_user: root
+  with_items:
+    - git-dolt-smudge
+    - git-dolt
+    - dolt
+  file:
+    src: '{{ dolt_bin_dir }}/{{ item }}'
+    dest: '{{ dolt_parent_install_dir }}/bin/{{ item }}'
+    state: link
