@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-VER=v0.9.7
+VER=${1:-v0.9.8}
 DIR=~/Downloads
 MIRROR=https://github.com/liquidata-inc/dolt/releases/download/${VER}
 
@@ -17,8 +17,8 @@ dl()
         wget -q -O $LFILE $URL
     fi
 
-    printf "      # %s\n" $URL
-    printf "      %s: sha256:%s\n" $PLATFORM `sha256sum $LFILE | awk '{print $1}'`
+    printf "    # %s\n" $URL
+    printf "    %s: sha256:%s\n" $PLATFORM `sha256sum $LFILE | awk '{print $1}'`
 }
 
 printf "  %s:\n" $VER
