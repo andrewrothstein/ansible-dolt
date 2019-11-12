@@ -1,17 +1,17 @@
 #!/usr/bin/env sh
-VER=${1:-v0.10.0}
 DIR=~/Downloads
-MIRROR=https://github.com/liquidata-inc/dolt/releases/download/${VER}
+MIRROR=https://github.com/liquidata-inc/dolt/releases/download
 
 dl()
 {
-    local os=$1
-    local arch=$2
-    local archive_type=${3:-tar.gz}
+    local ver=$1
+    local os=$2
+    local arch=$3
+    local archive_type=${4:-tar.gz}
     local platform=${os}-${arch}
     local rfile=dolt-${platform}.${archive_type}
-    local url=$MIRROR/$rfile
-    local lfile=$DIR/dolt-${platform}-${VER}.tar.gz
+    local url=$MIRROR/${ver}/$rfile
+    local lfile=$DIR/dolt-${platform}-${ver}.tar.gz
 
     if [ ! -e $lfile ];
     then
@@ -22,13 +22,15 @@ dl()
     printf "    %s: sha256:%s\n" $platform `sha256sum $lfile | awk '{print $1}'`
 }
 
-printf "  %s:\n" $VER
-dl darwin 386
-dl darwin amd64
-dl linux 386
-dl linux amd64
-dl windows 386 zip
-dl windows amd64 zip
+dl_ver() {
+    local ver=$1
+    printf "  %s:\n" $ver
+    dl $ver darwin 386
+    dl $ver darwin amd64
+    dl $ver linux 386
+    dl $ver linux amd64
+    dl $ver windows 386 zip
+    dl $ver windows amd64 zip
+}
 
-
-
+dl_ver ${1:-v0.11.0}
