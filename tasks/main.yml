@@ -40,6 +40,13 @@
         src: /tmp/{{ dolt_ltgz }}
         dest: '{{ dolt_install_ver_dir }}'
         creates: '{{ dolt_bin_dir }}'
+  always:
+    - name: cleanup
+      become: yes
+      become_user: root
+      file:
+        path: /tmp/{{ dolt_ltgz }}
+        state: absent
 - name: link
   become: yes
   become_user: root
