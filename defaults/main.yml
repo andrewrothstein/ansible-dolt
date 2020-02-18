@@ -1,6 +1,6 @@
 ---
 # defaults file for dolt
-dolt_ver: v0.13.1
+dolt_ver: v0.14.0
 dolt_os: linux
 dolt_arch: amd64
 
@@ -85,3 +85,16 @@ dolt_checksums:
     windows-386: sha256:d05bbafcfd7397a028a1dcb12b3f0758f37798dd267ac9de0af2dddee9deb541
     # https://github.com/liquidata-inc/dolt/releases/download/v0.13.1/dolt-windows-amd64.zip
     windows-amd64: sha256:83d974583f0fd2e3eefaa24326b80443bd71bb44a9ab2bd82060eb56e9705d36
+  v0.14.0:
+    # https://github.com/liquidata-inc/dolt/releases/download/v0.14.0/dolt-darwin-386.tar.gz
+    darwin-386: sha256:57bca6b583e74e7ba02215aa373b49bd8d0862363a524d5e8f813c8ccb5f2b68
+    # https://github.com/liquidata-inc/dolt/releases/download/v0.14.0/dolt-darwin-amd64.tar.gz
+    darwin-amd64: sha256:d8be60c3d60ec9c427e666207ab788d63c5de9ef7e8134661481c5fcef7b6be6
+    # https://github.com/liquidata-inc/dolt/releases/download/v0.14.0/dolt-linux-386.tar.gz
+    linux-386: sha256:8b0fd954c5fb0e22c612d05a54327d99c18bc9515b44072075db73088138c30e
+    # https://github.com/liquidata-inc/dolt/releases/download/v0.14.0/dolt-linux-amd64.tar.gz
+    linux-amd64: sha256:8b09cdae8fdd0d5fceea1ddc569cf1a9c381d6b92b775ad8fc6edcb6813ba8b9
+    # https://github.com/liquidata-inc/dolt/releases/download/v0.14.0/dolt-windows-386.zip
+    windows-386: sha256:5d6b532babafe665f00fed7fb609f72ff52affb3e5ebd5867daf5db21f116ef9
+    # https://github.com/liquidata-inc/dolt/releases/download/v0.14.0/dolt-windows-amd64.zip
+    windows-amd64: sha256:42a5b1f901ef4bef974a21d8d805ad746a8961f77b9ccd044b05bbd030a83fe9
