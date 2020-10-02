@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
+set -e
 DIR=~/Downloads
-MIRROR=https://github.com/liquidata-inc/dolt/releases/download
+MIRROR=https://github.com/dolthub/dolt/releases/download
 
 dl()
 {
@@ -25,12 +26,9 @@ dl()
 dl_ver() {
     local ver=$1
     printf "  %s:\n" $ver
-    dl $ver darwin 386
     dl $ver darwin amd64
-    dl $ver linux 386
     dl $ver linux amd64
-    dl $ver windows 386 zip
     dl $ver windows amd64 zip
 }
 
-dl_ver ${1:-v0.18.1}
+dl_ver ${1:-v0.19.2}
