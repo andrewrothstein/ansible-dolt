@@ -9,7 +9,7 @@
       skip: true
       paths:
         - '{{ role_path }}/vars'
-- name: check existing install
+- name: checking for existing install in {{ dolt_install_ver_dir }}
   become: yes
   stat:
     path: '{{ dolt_install_ver_dir }}'
@@ -17,35 +17,35 @@
   register: dolt_binary
 - when: not dolt_binary.stat.exists
   block:
-    - name: download
+    - name: downloading {{ dolt_url }}
       become: yes
       become_user: root
       get_url:
         url: '{{ dolt_url }}'
-        dest: /tmp/{{ dolt_ltgz }}
+        dest: '{{ dolt_tmp_ltgz }}'
         mode: 0644
         checksum: '{{ dolt_checksum }}'
-    - name: mkdir
+    - name: mkdir {{ dolt_install_ver_dir }}
       become: yes
       become_user: root
       file:
         path: '{{ dolt_install_ver_dir }}'
         state: directory
         mode: 0755
-    - name: unarchive
+    - name: unarchive {{ dolt_tmp_ltgz }}
       become: yes
       become_user: root
       unarchive:
         remote_src: yes
-        src: /tmp/{{ dolt_ltgz }}
+        src: '{{ dolt_tmp_ltgz }}'
         dest: '{{ dolt_install_ver_dir }}'
         creates: '{{ dolt_bin_dir }}'
   always:
-    - name: cleanup
+    - name: rm {{ dolt_tmp_ltgz }}
       become: yes
       become_user: root
       file:
-        path: /tmp/{{ dolt_ltgz }}
+        path: '{{ dolt_tmp_ltgz }}'
         state: absent
 - name: link
   become: yes
