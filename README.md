@@ -1,6 +1,6 @@
 andrewrothstein.dolt
 =========
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-dolt.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-dolt)
+![Build Status](https://github.com/andrewrothstein/ansible-dolt/actions/workflows/build.yml/badge.svg)
 
 Installs Liquidata's [dolt](https://github.com/liquidata-inc/dolt)
 
