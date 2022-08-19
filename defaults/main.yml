@@ -1,6 +1,6 @@
 ---
 # defaults file for dolt
-dolt_ver: v0.40.20
+dolt_ver: v0.40.27
 dolt_os: linux
 dolt_arch: amd64
 
@@ -618,3 +618,48 @@ dolt_checksums:
     linux-amd64: sha256:db47176ce5de70dcd8068eb4ce203839d5941c8191889c1fc161789b9e282625
     # https://github.com/dolthub/dolt/releases/download/v0.40.20/dolt-windows-amd64.zip
     windows-amd64: sha256:91217c15f4453b3304f45c2b64fb1b52b36279647d821b1248c4d5601cc38ade
+  v0.40.23:
+    # https://github.com/dolthub/dolt/releases/download/v0.40.23/dolt-darwin-amd64.tar.gz
+    darwin-amd64: sha256:6b2f0a103ae5ce53fd21e579304f5f9bf1c1d99106c4de038466977412bd00f1
+    # https://github.com/dolthub/dolt/releases/download/v0.40.23/dolt-darwin-arm64.tar.gz
+    darwin-arm64: sha256:a4a2c869427bd3e8feb06b70ef5e18413fa0d7c321c381acba1935a61d9d8b3c
+    # https://github.com/dolthub/dolt/releases/download/v0.40.23/dolt-linux-amd64.tar.gz
+    linux-amd64: sha256:96b79bc7933da1b2a62cf27f3ad98f48caa0cbe5c6cd3d21ae4a870c4910a86f
+    # https://github.com/dolthub/dolt/releases/download/v0.40.23/dolt-windows-amd64.zip
+    windows-amd64: sha256:3760113ca6a30c60c75d2fd0317a90840c961c76f843c8e415b3602b9ff0f534
+  v0.40.24:
+    # https://github.com/dolthub/dolt/releases/download/v0.40.24/dolt-darwin-amd64.tar.gz
+    darwin-amd64: sha256:68ae4be013cad7d56b9946cfd1bd6e5f3a30f04a368109260442ea89ef5f0b75
+    # https://github.com/dolthub/dolt/releases/download/v0.40.24/dolt-darwin-arm64.tar.gz
+    darwin-arm64: sha256:b05f627fe8941484c7462db5d2e5cd8b80e03642b370247bd7fd93c6f73d970e
+    # https://github.com/dolthub/dolt/releases/download/v0.40.24/dolt-linux-amd64.tar.gz
+    linux-amd64: sha256:39db6486d60141c3f2b21f6013226db6c07019b2498d1dc25e95e1c162c1ac88
+    # https://github.com/dolthub/dolt/releases/download/v0.40.24/dolt-windows-amd64.zip
+    windows-amd64: sha256:229e03cb7bd9610b6bf167ca3835d4180b032ce1586f28d634a9cd7394492e29
+  v0.40.25:
+    # https://github.com/dolthub/dolt/releases/download/v0.40.25/dolt-darwin-amd64.tar.gz
+    darwin-amd64: sha256:062d2648d4915ffb38007c86717a57271a701b4016cb90a9c825d6cdba1c9fcf
+    # https://github.com/dolthub/dolt/releases/download/v0.40.25/dolt-darwin-arm64.tar.gz
+    darwin-arm64: sha256:baaee4e12d3728287db1925621e79f3af84da640d56ea9c7feb6d780d866e9e1
+    # https://github.com/dolthub/dolt/releases/download/v0.40.25/dolt-linux-amd64.tar.gz
+    linux-amd64: sha256:4e802d0c5bf60401b93c1e80a1abcc2fd8361be71ac058914af5736e275b2c10
+    # https://github.com/dolthub/dolt/releases/download/v0.40.25/dolt-windows-amd64.zip
+    windows-amd64: sha256:603fb338d5710404c20da0bd8e6a408a47bfa38c2ad2f9ff17ad7d1dd3bd9392
+  v0.40.26:
+    # https://github.com/dolthub/dolt/releases/download/v0.40.26/dolt-darwin-amd64.tar.gz
+    darwin-amd64: sha256:156355206561880653d447ac788cf1b4074806baef45efa75e151fd75cd58b59
+    # https://github.com/dolthub/dolt/releases/download/v0.40.26/dolt-darwin-arm64.tar.gz
+    darwin-arm64: sha256:f90da7809926f8657de5ab042af535448a449dd0d1f26a5286e099bf06faae4e
+    # https://github.com/dolthub/dolt/releases/download/v0.40.26/dolt-linux-amd64.tar.gz
+    linux-amd64: sha256:df250e10a353b19bba2f579cc96529ae894509f663d7ac4cf14a79c777ae48ed
+    # https://github.com/dolthub/dolt/releases/download/v0.40.26/dolt-windows-amd64.zip
+    windows-amd64: sha256:c6a2ba9bc7422e896212e92e260c0280973ce9e926b15efeb15919fb6d3dcfaf
+  v0.40.27:
+    # https://github.com/dolthub/dolt/releases/download/v0.40.27/dolt-darwin-amd64.tar.gz
+    darwin-amd64: sha256:c181aa86e4b0803221b84c11797f1b7b100bd58f6044a9e5eb1ab5a597693199
+    # https://github.com/dolthub/dolt/releases/download/v0.40.27/dolt-darwin-arm64.tar.gz
+    darwin-arm64: sha256:ea65bb16555d17e00c14b4facc82083c1be80e1cdd374c599916707adf7ba55c
+    # https://github.com/dolthub/dolt/releases/download/v0.40.27/dolt-linux-amd64.tar.gz
+    linux-amd64: sha256:228dfd74bf807efb1622aff9a10b23ad5c2fdf7c2c998e6eb7fd7caa3fa6462f
+    # https://github.com/dolthub/dolt/releases/download/v0.40.27/dolt-windows-amd64.zip
+    windows-amd64: sha256:264343bc5b9a3881efaa7526217838ac1aa7b37a1ab32430a066ae07342400cb
