@@ -1,5 +1,7 @@
 ---
 # vars file for dolt
+dolt_os: '{{ ansible_system | lower }}'
+dolt_arch: '{{ dolt_arch_map[ansible_architecture] }}'
 dolt_platform: '{{ dolt_os }}-{{ dolt_arch }}'
 dolt_name: dolt-{{ dolt_platform }}
 dolt_tgz: '{{ dolt_name }}.tar.gz'

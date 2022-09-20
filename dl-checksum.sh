@@ -29,7 +29,8 @@ dl_ver() {
     dl $ver darwin amd64
     dl $ver darwin arm64
     dl $ver linux amd64
+    dl $ver linux arm64
     dl $ver windows amd64 zip
 }
 
-dl_ver ${1:-v0.40.28}
+dl_ver ${1:-v0.41.4}

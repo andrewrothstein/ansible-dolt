@@ -1,4 +1,6 @@
 ---
+- include_role:
+    name: andrewrothstein.unarchive-deps
 - name: resolve platform specific vars
   include_vars: '{{ item }}'
   with_first_found:
@@ -10,7 +12,7 @@
       paths:
         - '{{ role_path }}/vars'
 - name: checking for existing install in {{ dolt_install_ver_dir }}
-  become: yes
+  become: true
   stat:
     path: '{{ dolt_install_ver_dir }}'
   changed_when: False
@@ -18,7 +20,7 @@
 - when: not dolt_binary.stat.exists
   block:
     - name: downloading {{ dolt_url }}
-      become: yes
+      become: true
       become_user: root
       get_url:
         url: '{{ dolt_url }}'
@@ -26,33 +28,31 @@
         mode: 0644
         checksum: '{{ dolt_checksum }}'
     - name: mkdir {{ dolt_install_ver_dir }}
-      become: yes
+      become: true
       become_user: root
       file:
         path: '{{ dolt_install_ver_dir }}'
         state: directory
         mode: 0755
     - name: unarchive {{ dolt_tmp_ltgz }}
-      become: yes
+      become: true
       become_user: root
       unarchive:
-        remote_src: yes
+        remote_src: true
         src: '{{ dolt_tmp_ltgz }}'
         dest: '{{ dolt_install_ver_dir }}'
         creates: '{{ dolt_bin_dir }}'
   always:
     - name: rm {{ dolt_tmp_ltgz }}
-      become: yes
+      become: true
       become_user: root
       file:
         path: '{{ dolt_tmp_ltgz }}'
         state: absent
-- name: link
-  become: yes
+- name: linking items in (( dolt_parent_install_dir }}/bin to items in {{ dolt_bin_dir }}
+  become: true
   become_user: root
   with_items:
-    - git-dolt-smudge
-    - git-dolt
     - dolt
   file:
     src: '{{ dolt_bin_dir }}/{{ item }}'
