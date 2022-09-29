@@ -49,7 +49,7 @@
       file:
         path: '{{ dolt_tmp_ltgz }}'
         state: absent
-- name: linking items in (( dolt_parent_install_dir }}/bin to items in {{ dolt_bin_dir }}
+- name: linking items in {{ dolt_parent_install_dir }}/bin to items in {{ dolt_bin_dir }}
   become: true
   become_user: root
   with_items:
