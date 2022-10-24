@@ -15,7 +15,7 @@
   become: true
   stat:
     path: '{{ dolt_install_ver_dir }}'
-  changed_when: False
+  changed_when: false
   register: dolt_binary
 - when: not dolt_binary.stat.exists
   block:
