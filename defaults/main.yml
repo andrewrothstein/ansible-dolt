@@ -1,6 +1,6 @@
 ---
 # defaults file for dolt
-dolt_ver: v0.50.12
+dolt_ver: v0.50.16
 dolt_arch_map:
   386: 386
   aarch64: arm64
@@ -785,3 +785,47 @@ dolt_checksums:
     linux-arm64: sha256:8ae07309405983199cf2cf609a09110a63d58f38c24d438528b1dfebd50c1a74
     # https://github.com/dolthub/dolt/releases/download/v0.50.12/dolt-windows-amd64.zip
     windows-amd64: sha256:d8431485683c546c4daa3f091a77583d5578974a758febcc72e194e5ce4d3c8a
+  v0.50.13:
+    # https://github.com/dolthub/dolt/releases/download/v0.50.13/dolt-darwin-amd64.tar.gz
+    darwin-amd64: sha256:b0b25821baf4a80166e861701e4f0c8648108a6f3c003cc338c8f7d48b66e857
+    # https://github.com/dolthub/dolt/releases/download/v0.50.13/dolt-darwin-arm64.tar.gz
+    darwin-arm64: sha256:4439527fa813646e6f5f001380df3133618d0391747ecab59a7db1ce559dc05d
+    # https://github.com/dolthub/dolt/releases/download/v0.50.13/dolt-linux-amd64.tar.gz
+    linux-amd64: sha256:82cf7ce93bdd62e54fb614150ddce0a50c2408b1f9dd0789fd6ce8ad0ee92af8
+    # https://github.com/dolthub/dolt/releases/download/v0.50.13/dolt-linux-arm64.tar.gz
+    linux-arm64: sha256:12781b346e1c2745d8936b313f23d61357ebaa8559f44929fd9b6e3cae73b4af
+    # https://github.com/dolthub/dolt/releases/download/v0.50.13/dolt-windows-amd64.zip
+    windows-amd64: sha256:bf2e604afe1b9a3f38ec471681d714c475f8622f1635520ab8eb2e9a0ac91edb
+  v0.50.14:
+    # https://github.com/dolthub/dolt/releases/download/v0.50.14/dolt-darwin-amd64.tar.gz
+    darwin-amd64: sha256:85c11453b64754231812e2c571541dc1fa6afd3977815211732e3069d5136478
+    # https://github.com/dolthub/dolt/releases/download/v0.50.14/dolt-darwin-arm64.tar.gz
+    darwin-arm64: sha256:1c3ac8958a768f5ce0cfea46f8f890c59588d29df940c9bd021c4e6c2d30f6a9
+    # https://github.com/dolthub/dolt/releases/download/v0.50.14/dolt-linux-amd64.tar.gz
+    linux-amd64: sha256:917041b25c5fc7146de8d1f450b6683550e0193091fb54d35ecc20b7687d9a5d
+    # https://github.com/dolthub/dolt/releases/download/v0.50.14/dolt-linux-arm64.tar.gz
+    linux-arm64: sha256:185d47b5316d38bd814f865597f7481eb565e5aaeb4faf84395579238c426faa
+    # https://github.com/dolthub/dolt/releases/download/v0.50.14/dolt-windows-amd64.zip
+    windows-amd64: sha256:a3f84e5f1081ae79b164b36407cc72338557eef26f09a212ff98e5513882effd
+  v0.50.15:
+    # https://github.com/dolthub/dolt/releases/download/v0.50.15/dolt-darwin-amd64.tar.gz
+    darwin-amd64: sha256:5339b72e2f1e5c179e3eeeb2d2003812400fcec42fabf08c4719a36608177a83
+    # https://github.com/dolthub/dolt/releases/download/v0.50.15/dolt-darwin-arm64.tar.gz
+    darwin-arm64: sha256:f9c1bf4493c56a85cb738f0496f5fb60ff0d95532d51e411ab94669a7af518cc
+    # https://github.com/dolthub/dolt/releases/download/v0.50.15/dolt-linux-amd64.tar.gz
+    linux-amd64: sha256:433a2ac2da295f906e438473d36306daf0f1ea9718e50b53ae5bf9ef96eb7fc1
+    # https://github.com/dolthub/dolt/releases/download/v0.50.15/dolt-linux-arm64.tar.gz
+    linux-arm64: sha256:de7b83c2ff0a9d5202bba85ab5fa6f64db23b30fc8757f3a81cb70afc32b8626
+    # https://github.com/dolthub/dolt/releases/download/v0.50.15/dolt-windows-amd64.zip
+    windows-amd64: sha256:9231b68f7f64dd39f19c1b403794ece0abc3ea1c9e881b909fca8ce07085d895
+  v0.50.16:
+    # https://github.com/dolthub/dolt/releases/download/v0.50.16/dolt-darwin-amd64.tar.gz
+    darwin-amd64: sha256:c5b2616664e72ac2c13d2478f15ac3c827f03b7ef8de1a418b325cb4ee0d1390
+    # https://github.com/dolthub/dolt/releases/download/v0.50.16/dolt-darwin-arm64.tar.gz
+    darwin-arm64: sha256:13b44e66d4dc6f145d92a43cf021cf819287984afb64593a58daf0e9456c8d2e
+    # https://github.com/dolthub/dolt/releases/download/v0.50.16/dolt-linux-amd64.tar.gz
+    linux-amd64: sha256:dd96a959d0972e11a288dfc762db105eb47e2bbe87098e45ec2d48a614661f38
+    # https://github.com/dolthub/dolt/releases/download/v0.50.16/dolt-linux-arm64.tar.gz
+    linux-arm64: sha256:441bc0636222c93d32440578157cf7b0a5e2d8330d70a4e4e95d0f1021347ed8
+    # https://github.com/dolthub/dolt/releases/download/v0.50.16/dolt-windows-amd64.zip
+    windows-amd64: sha256:4d13707c2a63538f79cbdd2c677ae5fcb52f29692bba1bc79c06ae784827ab54
