@@ -1,10 +1,14 @@
 ---
-- hosts: all
-  roles:
-    - role: '{{ playbook_dir }}'
+- name: Testing andrewrothstein.dolt
+  hosts: all
   tasks:
-    - command: /usr/local/bin/dolt version
+    - name: Installing dolt
+      ansible.builtin.include_role:
+        name: '{{ playbook_dir }}'
+    - name: Executing 'dolt version'
+      ansible.builtin.command: /usr/local/bin/dolt version
+      changed_when: false
       register: dolt_test_output
-    - name: dolt version
-      debug:
+    - name: Output of 'dolt version'
+      ansible.builtin.debug:
         msg: '{{ dolt_test_output.stdout }}'
