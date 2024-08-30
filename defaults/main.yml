@@ -1,6 +1,6 @@
 ---
 # defaults file for dolt
-dolt_ver: v1.42.14
+dolt_ver: v1.42.16
 dolt_arch_map:
   386: 386
   aarch64: arm64
@@ -1753,3 +1753,14 @@ dolt_checksums:
     linux-arm64: sha256:8d045c18b7d8a6981655c76278d362cd36348c43abae74d1ec02ee969388edc7
     # https://github.com/dolthub/dolt/releases/download/v1.42.14/dolt-windows-amd64.zip
     windows-amd64: sha256:a0d87c88669ef6f9744941e4d23ffde17b90a93e825af2b2776bf083eb0edb24
+  v1.42.16:
+    # https://github.com/dolthub/dolt/releases/download/v1.42.16/dolt-darwin-amd64.tar.gz
+    darwin-amd64: sha256:85889d62af0aa4a11cfeaeff97fc18fb2b0eadd55d421c800ca1140b1d7850f7
+    # https://github.com/dolthub/dolt/releases/download/v1.42.16/dolt-darwin-arm64.tar.gz
+    darwin-arm64: sha256:dab28324aa0cc29b904bc2863a8db30820881440e1590812301c8617ccb97dd9
+    # https://github.com/dolthub/dolt/releases/download/v1.42.16/dolt-linux-amd64.tar.gz
+    linux-amd64: sha256:6f706411a8098da0461572102e203af2718e03fd298b794a083498ed010f5872
+    # https://github.com/dolthub/dolt/releases/download/v1.42.16/dolt-linux-arm64.tar.gz
+    linux-arm64: sha256:6885385ecdcd05779ebc22ebcf231b95a565348fe9e6cff698c2999c6f8aba50
+    # https://github.com/dolthub/dolt/releases/download/v1.42.16/dolt-windows-amd64.zip
+    windows-amd64: sha256:47e6f5147ff5d1b6cfc6431c96fe3ef13699e78393481d502c3ad8c709e8b4e4
