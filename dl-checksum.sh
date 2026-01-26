@@ -33,4 +33,17 @@ dl_ver() {
     dl $ver windows amd64 zip
 }
 
-dl_ver ${1:-v1.78.5}
+dl_ver v1.78.6
+dl_ver v1.78.7
+dl_ver v1.78.8
+dl_ver v1.79.0
+dl_ver v1.79.1
+dl_ver v1.79.2
+dl_ver v1.79.3
+dl_ver v1.79.4
+dl_ver v1.80.0
+dl_ver v1.80.1
+dl_ver v1.80.2
+dl_ver v1.81.0
+dl_ver v1.81.1
+dl_ver ${1:-v1.81.2}
