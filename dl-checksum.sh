@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -e
-DIR=~/Downloads
+DIR=$(mktemp -d)
+trap 'rm -rf "$DIR"' EXIT
 MIRROR=https://github.com/dolthub/dolt/releases/download
 
 dl()
@@ -14,10 +15,7 @@ dl()
     local url=$MIRROR/${ver}/$rfile
     local lfile=$DIR/dolt-${platform}-${ver}.tar.gz
 
-    if [ ! -e "$lfile" ];
-    then
-        curl -fsSL --proto '=https' --tlsv1.2 -o "$lfile" "$url"
-    fi
+    curl -fsSL --proto '=https' --tlsv1.2 -o "$lfile" "$url"
     local sum
     sum=$(sha256sum "$lfile" | awk '{print $1}')
     if ! printf '%s' "$sum" | grep -Eq '^[0-9a-f]{64}$'; then
@@ -39,6 +37,6 @@ dl_ver() {
     dl "$ver" windows amd64 zip
 }
 
-for v in "${@:-v2.7.2}"; do
+for v in "${@:-v2.7.4}"; do
     dl_ver "$v"
 done

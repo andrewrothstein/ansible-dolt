@@ -1,6 +1,6 @@
 ---
 # defaults file for dolt
-dolt_ver: v2.7.2
+dolt_ver: v2.7.4
 dolt_arch_map:
   386: 386
   aarch64: arm64
@@ -3019,3 +3019,25 @@ dolt_checksums:
     linux-arm64: sha256:5498898fdb4b93ce69deb9e32fb9e0fbaceb734657e6013afc0e914ae9c10afe
     # https://github.com/dolthub/dolt/releases/download/v2.7.2/dolt-windows-amd64.zip
     windows-amd64: sha256:be7af7dc155733f8fa3e32eb5ea4d486ea6fb08c60ebdc2faa661d862b48b58d
+  v2.7.3:
+    # https://github.com/dolthub/dolt/releases/download/v2.7.3/dolt-darwin-amd64.tar.gz
+    darwin-amd64: sha256:2bed12d0391235b7bae9bb4bd913b6bcd7f451e5c06b9c2e4a60da6421b8d1e8
+    # https://github.com/dolthub/dolt/releases/download/v2.7.3/dolt-darwin-arm64.tar.gz
+    darwin-arm64: sha256:25952ef67a12c27e3cfc3fcd3e654e90efcf1e8e59981451de4f31159fc6c6f2
+    # https://github.com/dolthub/dolt/releases/download/v2.7.3/dolt-linux-amd64.tar.gz
+    linux-amd64: sha256:9781349614fb0583badc28ccd5a6c009dd7345f0f34dfabf2516cc25c42865b3
+    # https://github.com/dolthub/dolt/releases/download/v2.7.3/dolt-linux-arm64.tar.gz
+    linux-arm64: sha256:7b01035a33164a6d9ba541fa410c82873eca66b99a4343c60d7433cfc067ef06
+    # https://github.com/dolthub/dolt/releases/download/v2.7.3/dolt-windows-amd64.zip
+    windows-amd64: sha256:0033b4bc2081f7a769351cba9a34132226ec06bdcd6e499653bafd5c4147d0e6
+  v2.7.4:
+    # https://github.com/dolthub/dolt/releases/download/v2.7.4/dolt-darwin-amd64.tar.gz
+    darwin-amd64: sha256:cd8db0c3d2766167b5ac0f41fd29493d9e7cb90520a90406a89351ab7e5652e4
+    # https://github.com/dolthub/dolt/releases/download/v2.7.4/dolt-darwin-arm64.tar.gz
+    darwin-arm64: sha256:490aadba28ce1c7846b8ecff8ac21da8bf758f6f94aae96c88f7a9908ea27017
+    # https://github.com/dolthub/dolt/releases/download/v2.7.4/dolt-linux-amd64.tar.gz
+    linux-amd64: sha256:bfadc7c38c3883309770691445bf963be84c99ea4274f782b398be21e837c85c
+    # https://github.com/dolthub/dolt/releases/download/v2.7.4/dolt-linux-arm64.tar.gz
+    linux-arm64: sha256:a4a91a24d0d26641e12576796b42a0b98edf8cf6b05f2828151730723cdc5bb3
+    # https://github.com/dolthub/dolt/releases/download/v2.7.4/dolt-windows-amd64.zip
+    windows-amd64: sha256:e23523e25f865eb7d8aa98bc5e318d377342172643dfded0b5e8d6c30d0355be
