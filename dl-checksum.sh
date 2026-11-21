@@ -37,6 +37,6 @@ dl_ver() {
     dl "$ver" windows amd64 zip
 }
 
-for v in "${@:-v2.7.5}"; do
+for v in "${@:-v2.7.6}"; do
     dl_ver "$v"
 done
